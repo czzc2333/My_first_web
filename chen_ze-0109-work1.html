@@ -1,9 +1,114 @@
-<HTML>
-  <HEAD>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-    <TITLE>My first page</TITLE>
-  </HEAD>
-  <BODY>
-    这是我的第一个静态网页！
-  </BODY>
-</HTML>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f1ea;
+            font-family: "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 56px;
+            font-weight: 800;
+            color: #1f2430;
+            letter-spacing: 6px;
+            z-index: 10;
+        }
+
+        .line {
+            position: absolute;
+            bottom: 40%;
+            width: 80px;
+            height: 2px;
+            background-color: #1f2430;
+            z-index: 10;
+        }
+
+        .block {
+            position: absolute;
+            border-radius: 2px;
+        }
+
+        .block-green {
+            width: 38%;
+            height: 42%;
+            background-color: #2f4a42;
+            top: 0;
+            left: 0;
+        }
+
+        .block-orange {
+            width: 22%;
+            height: 28%;
+            background-color: #d48a45;
+            top: 18%;
+            right: 8%;
+        }
+
+        .block-blue {
+            width: 28%;
+            height: 34%;
+            background-color: #7f94a8;
+            bottom: 6%;
+            left: 30%;
+        }
+
+        .block-gray {
+            width: 18%;
+            height: 22%;
+            background-color: #cfd3d6;
+            bottom: 12%;
+            right: 18%;
+        }
+
+        .circle {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.35);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+
+        <div class="block block-green"></div>
+        <div class="block block-orange"></div>
+        <div class="block block-blue"></div>
+        <div class="block block-gray"></div>
+
+        <h1 class="title">我的第一个网页</h1>
+        <div class="line"></div>
+    </div>
+</body>
+</html>
